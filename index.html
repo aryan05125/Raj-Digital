@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Digital Photography | Weddings • Pre-Wedding • Events</title>
+  <meta name="description" content="Professional photography and storytelling services for weddings, pre-wedding shoots, and events. Capturing your precious moments with artistic vision.">
+  
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Sofia Pro Font -->
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body { font-family: "sofia-pro", sans-serif; }
+    
+    .parallax-bg {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .gradient-overlay {
+      background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+    
+    .image-hover-effect {
+      transition: all 0.5s ease;
+    }
+    
+    .image-hover-effect:hover {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+    
+    .typing-animation {
+      border-right: 2px solid #ffffff;
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { border-color: transparent; }
+      51%, 100% { border-color: #ffffff; }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .social-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .social-hover:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+  
+  <!-- Navigation -->
+  <nav data-id="main-navigation" class="fixed w-full top-0 z-50 glass-effect">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <div data-id="nav-logo" class="flex items-center space-x-3">
+          <img src="Raj.jpg" alt="Raj Photography Logo" class="w-10 h-10 rounded-full object-cover border-2 border-white">
+          <span class="text-xl font-bold text-gradient">RAJ DIGITAL</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div data-id="desktop-menu" class="hidden md:flex items-center space-x-8">
+          <a href="#hero" data-id="nav-home" class="hover:text-gray-300 transition-colors">Home</a>
+          <a href="#services" data-id="nav-services" class="hover:text-gray-300 transition-colors">Services</a>
+          <a href="#portfolio" data-id="nav-portfolio" class="hover:text-gray-300 transition-colors">Portfolio</a>
+          <a href="#about" data-id="nav-about" class="hover:text-gray-300 transition-colors">About</a>
+          <a href="#contact" data-id="nav-contact" class="hover:text-gray-300 transition-colors">Contact</a>
+        </div>
+        
+        <!-- Social Links -->
+        <div data-id="nav-social" class="hidden sm:flex items-center space-x-3">
+          <a href="https://instagram.com/rd_photography.25" target="_blank" data-id="nav-instagram" class="p-2 rounded-full social-hover">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://facebook.com/rajgiriGoswami2501" target="_blank" data-id="nav-facebook" class="p-2 rounded-full social-hover">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/9157008150" target="_blank" data-id="nav-whatsapp" class="p-2 rounded-full social-hover">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:rdphotography2501@gmail.com" data-id="nav-email" class="p-2 rounded-full social-hover">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          <a href="https://www.youtube.com/@rajgiri_creator" target="_blank" data-id="nav-youtube" class="p-2 rounded-full social-hover">
+            <i data-lucide="youtube" class="w-5 h-5"></i>
+          </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button data-id="mobile-menu-button" class="md:hidden p-2 rounded-lg glass-effect">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div data-id="mobile-menu" class="md:hidden hidden glass-effect">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#hero" data-id="mobile-nav-home" class="block py-2 hover:text-gray-300 transition-colors">Home</a>
+        <a href="#services" data-id="mobile-nav-services" class="block py-2 hover:text-gray-300 transition-colors">Services</a>
+        <a href="#portfolio" data-id="mobile-nav-portfolio" class="block py-2 hover:text-gray-300 transition-colors">Portfolio</a>
+        <a href="#about" data-id="mobile-nav-about" class="block py-2 hover:text-gray-300 transition-colors">About</a>
+        <a href="#contact" data-id="mobile-nav-contact" class="block py-2 hover:text-gray-300 transition-colors">Contact</a>
+        
+        <div class="flex space-x-4 pt-3 border-t border-gray-700">
+          <a href="https://instagram.com/rd_photography.25" target="_blank" data-id="mobile-instagram" class="p-2 rounded-full social-hover">
+            <i data-lucide="instagram" class="w-5 h-5"></i>
+          </a>
+          <a href="https://facebook.com/rajgiriGoswami2501" target="_blank" data-id="mobile-facebook" class="p-2 rounded-full social-hover">
+            <i data-lucide="facebook" class="w-5 h-5"></i>
+          </a>
+          <a href="https://wa.me/9157008150" target="_blank" data-id="mobile-whatsapp" class="p-2 rounded-full social-hover">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:raj@digitalphotography.com" data-id="mobile-email" class="p-2 rounded-full social-hover">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" data-id="hero-section" class="relative h-screen flex items-center justify-center parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1920&h=1080&fit=crop')">
+    <div class="absolute inset-0 gradient-overlay"></div>
+    
+    <div data-id="hero-content" class="relative z-10 text-center max-w-5xl mx-auto px-4 fade-in">
+      <h1 data-id="hero-title" class="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+        RAJ DIGITAL
+      </h1>
+      <div data-id="hero-subtitle" class="text-xl md:text-2xl mb-4 h-8">
+        <span id="typing-text" class="typing-animation">PHOTOGRAPHY & STORY TELLING</span>
+      </div>
+      <p data-id="hero-description" class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+        Capturing life's most precious moments through the lens of creativity and passion
+      </p>
+      
+      <div data-id="hero-services" class="flex flex-wrap justify-center gap-4 mb-8">
+        <span class="px-4 py-2 glass-effect rounded-full text-sm">WEDDINGS</span>
+        <span class="px-4 py-2 glass-effect rounded-full text-sm">PRE-WEDDING</span>
+        <span class="px-4 py-2 glass-effect rounded-full text-sm">EVENTS</span>
+        <span class="px-4 py-2 glass-effect rounded-full text-sm">CINEMATOGRAPHY</span>
+      </div>
+      
+      <button data-id="hero-cta" class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-all transform hover:scale-105">
+        View Portfolio
+      </button>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div data-id="scroll-indicator" class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" data-id="services-section" class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-id="services-header" class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Our Services</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Professional photography and cinematography services tailored to capture your special moments
+        </p>
+      </div>
+      
+      <div data-id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Wedding Photography -->
+        <div data-id="service-weddings" class="service-card glass-effect rounded-lg p-6 text-center fade-in">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="heart" class="w-8 h-8 text-black"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">WEDDINGS</h3>
+          <p class="text-gray-400 mb-4">Complete wedding day coverage with artistic storytelling and candid moments</p>
+          <div class="text-sm text-gray-500">
+            <p>• Full day coverage</p>
+            <p>• Pre-ceremony shots</p>
+            <p>• Reception highlights</p>
+          </div>
+        </div>
+        
+        <!-- Pre-Wedding -->
+        <div data-id="service-prewedding" class="service-card glass-effect rounded-lg p-6 text-center fade-in">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="camera" class="w-8 h-8 text-black"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">PRE-WEDDING</h3>
+          <p class="text-gray-400 mb-4">Romantic and creative pre-wedding shoots at stunning locations</p>
+          <div class="text-sm text-gray-500">
+            <p>• Location scouting</p>
+            <p>• Couple portraits</p>
+            <p>• Creative concepts</p>
+          </div>
+        </div>
+        
+        <!-- Events -->
+        <div data-id="service-events" class="service-card glass-effect rounded-lg p-6 text-center fade-in">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="calendar" class="w-8 h-8 text-black"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">EVENTS</h3>
+          <p class="text-gray-400 mb-4">Corporate events, celebrations, and special occasions photography</p>
+          <div class="text-sm text-gray-500">
+            <p>• Corporate events</p>
+            <p>• Birthdays & parties</p>
+            <p>• Special occasions</p>
+          </div>
+        </div>
+        
+        <!-- Cinematography -->
+        <div data-id="service-cinematography" class="service-card glass-effect rounded-lg p-6 text-center fade-in">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="video" class="w-8 h-8 text-black"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">CINEMATOGRAPHY</h3>
+          <p class="text-gray-400 mb-4">Professional video production and cinematic storytelling</p>
+          <div class="text-sm text-gray-500">
+            <p>• Wedding films</p>
+            <p>• Event coverage</p>
+            <p>• Promotional videos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" data-id="portfolio-section" class="py-20 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-id="portfolio-header" class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Portfolio</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          A glimpse into our recent work and the stories we've captured
+        </p>
+      </div>
+      
+      <!-- Portfolio Filter -->
+      <div data-id="portfolio-filter" class="flex justify-center mb-12 fade-in">
+        <div class="flex space-x-4 glass-effect rounded-full p-2">
+          <button data-id="filter-all" class="filter-btn active px-6 py-2 rounded-full bg-white text-black font-medium">All</button>
+          <button data-id="filter-weddings" class="filter-btn px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">Weddings</button>
+          <button data-id="filter-prewedding" class="filter-btn px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">Pre-Wedding</button>
+          <button data-id="filter-events" class="filter-btn px-6 py-2 rounded-full hover:bg-gray-800 transition-colors">Events</button>
+        </div>
+      </div>
+      
+      <!-- Portfolio Grid -->
+      <div data-id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Portfolio Item 1 -->
+        <div data-id="portfolio-item-1" class="portfolio-item weddings relative overflow-hidden rounded-lg group">
+          <img src="r1.jpg" alt="Wedding Photography" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Romantic Wedding</h4>
+              <p class="text-sm text-gray-300">Wedding Photography</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 2 -->
+        <div data-id="portfolio-item-2" class="portfolio-item prewedding relative overflow-hidden rounded-lg group">
+          <img src="prew.jpg" alt="Pre-Wedding Shoot" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Sunset Romance</h4>
+              <p class="text-sm text-gray-300">Pre-Wedding Shoot</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 3 -->
+        <div data-id="portfolio-item-3" class="portfolio-item events relative overflow-hidden rounded-lg group">
+          <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=500&fit=crop" alt="Event Photography" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Corporate Event</h4>
+              <p class="text-sm text-gray-300">Event Photography</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 4 -->
+        <div data-id="portfolio-item-4" class="portfolio-item weddings relative overflow-hidden rounded-lg group">
+          <img src="wc.jpg" alt="Wedding Ceremony" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Sacred Moments</h4>
+              <p class="text-sm text-gray-300">Wedding Ceremony</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 5 -->
+        <div data-id="portfolio-item-5" class="portfolio-item prewedding relative overflow-hidden rounded-lg group">
+          <img src="cp.jpg" alt="Couple Portrait" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Love Story</h4>
+              <p class="text-sm text-gray-300">Couple Portrait</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Portfolio Item 6 -->
+        <div data-id="portfolio-item-6" class="portfolio-item events relative overflow-hidden rounded-lg group">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=500&fit=crop" alt="Birthday Celebration" class="w-full h-80 object-cover image-hover-effect filter grayscale">
+          <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold mb-2">Birthday Joy</h4>
+              <p class="text-sm text-gray-300">Celebration Photography</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" data-id="about-section" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div data-id="about-content" class="fade-in">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">About Raj</h2>
+          <p class="text-xl text-gray-300 mb-6">
+            With over 3 years of experience in photography and cinematography, I specialize in capturing the essence of your most precious moments.
+          </p>
+          <p class="text-gray-400 mb-6">
+            My passion lies in storytelling through visual art. Every wedding, every pre-wedding shoot, and every event is a unique story waiting to be told. I believe in creating timeless memories that you'll treasure forever.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white mb-2">15+</div>
+              <div class="text-gray-400">Happy Couples</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white mb-2">3+</div>
+              <div class="text-gray-400">Years Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white mb-2">17+</div>
+              <div class="text-gray-400">Events Covered</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white mb-2">0+</div>
+              <div class="text-gray-400">Awards Won</div>
+            </div>
+          </div>
+        </div>
+        
+        <div data-id="about-image" class="fade-in">
+          <img src="raji1.jpg" alt="Raj - Professional Photographer" class="w-full h-96 object-cover rounded-lg filter grayscale image-hover-effect">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-id="contact-section" class="py-20 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div data-id="contact-header" class="text-center mb-16 fade-in">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Get In Touch</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Ready to capture your special moments? Let's discuss your photography needs
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div data-id="contact-form-container" class="fade-in">
+          <form data-id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <input data-id="contact-name" type="text" placeholder="Your Name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors">
+              <input data-id="contact-email" type="email" placeholder="Your Email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors">
+            </div>
+            <input data-id="contact-subject" type="text" placeholder="Subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors">
+            <textarea data-id="contact-message" placeholder="Your Message" rows="6" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-white transition-colors resize-none"></textarea>
+            <button data-id="contact-submit" type="submit" class="w-full bg-white text-black py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+              Send Message
+            </button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div data-id="contact-info" class="fade-in">
+          <div class="space-y-8">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <i data-lucide="phone" class="w-6 h-6 text-black"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">Phone</h4>
+                <p class="text-gray-400">+91 9157008150</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <i data-lucide="mail" class="w-6 h-6 text-black"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">Email</h4>
+                <p class="text-gray-400">rdphotography2501@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                <i data-lucide="map-pin" class="w-6 h-6 text-black"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">Location</h4>
+                <p class="text-gray-400">Raigadh, Gujarat, India</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Social Media Links -->
+          <div data-id="contact-social" class="mt-12">
+            <h4 class="text-lg font-semibold mb-6">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="https://instagram.com/rd_photography.25" target="_blank" data-id="contact-instagram" class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center social-hover">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+              </a>
+              <a href="https://facebook.com/rajgiriGoswami2501" target="_blank" data-id="contact-facebook" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center social-hover">
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </a>
+              <a href="https://wa.me/9157008150" target="_blank" data-id="contact-whatsapp" class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center social-hover">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </a>
+              <a href="mailto:rdphotography2501@gmail.com" data-id="contact-email-link" class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center social-hover">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              <a href="https://youtube.com/@rajgiri_creator" target="_blank" data-id="contact-youtube" class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center social-hover">
+                <i data-lucide="youtube" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-id="footer" class="py-8 bg-gray-900 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p data-id="footer-copyright" class="text-gray-400">
+          © 2025 Raj Digital Photography. All rights reserved.
+        </p>
+        <p data-id="footer-tagline" class="text-sm text-gray-500 mt-2">
+          Capturing memories, Creating stories
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.querySelector('[data-id="mobile-menu-button"]');
+    const mobileMenu = document.querySelector('[data-id="mobile-menu"]');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        // Close mobile menu if open
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    // Typing Animation
+    const typingTexts = [
+      'PHOTOGRAPHY & STORY TELLING',
+      'CAPTURING MOMENTS',
+      'CREATING MEMORIES',
+      'PROFESSIONAL CINEMATOGRAPHY'
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing-text');
+    
+    function typeWriter() {
+      const currentText = typingTexts[textIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      
+      let typingSpeed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && charIndex === currentText.length) {
+        typingSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typingTexts.length;
+        typingSpeed = 500;
+      }
+      
+      setTimeout(typeWriter, typingSpeed);
+    }
+    
+    // Start typing animation
+    typeWriter();
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active', 'bg-white', 'text-black');
+          btn.classList.add('hover:bg-gray-800');
+        });
+        
+        // Add active class to clicked button
+        button.classList.add('active', 'bg-white', 'text-black');
+        button.classList.remove('hover:bg-gray-800');
+        
+        // Filter portfolio items
+        const filterValue = button.dataset.id.replace('filter-', '');
+        
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = 'block';
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'scale(1)';
+            }, 100);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+    
+    // Contact Form Handler
+    const contactForm = document.querySelector('[data-id="contact-form"]');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const name = document.querySelector('[data-id="contact-name"]').value;
+      const email = document.querySelector('[data-id="contact-email"]').value;
+      const subject = document.querySelector('[data-id="contact-subject"]').value;
+      const message = document.querySelector('[data-id="contact-message"]').value;
+      
+      // Simple validation
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Simulate form submission
+      const submitButton = document.querySelector('[data-id="contact-submit"]');
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+      
+      setTimeout(() => {
+        alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
+        contactForm.reset();
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+      }, 2000);
+    });
+    
+    // Hero CTA Button
+    document.querySelector('[data-id="hero-cta"]').addEventListener('click', () => {
+      document.querySelector('#portfolio').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+    
+    // Parallax Effect for Hero Section
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroSection = document.querySelector('[data-id="hero-section"]');
+      const rate = scrolled * -0.5;
+      
+      if (heroSection) {
+        heroSection.style.transform = `translateY(${rate}px)`;
+      }
+    });
+    
+    // Add loading animation
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
